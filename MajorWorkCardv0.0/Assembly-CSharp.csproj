@@ -64,7 +64,11 @@
   <ItemGroup>
     <Compile Include="Assets\Drag.cs" />
     <Compile Include="Assets\Draw.cs" />
+    <Compile Include="Assets\EndTurn.cs" />
+    <Compile Include="Assets\Energy.cs" />
+    <Compile Include="Assets\GameData.cs" />
     <Compile Include="Assets\Hand.cs" />
+    <Compile Include="Assets\PlayCard.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Esra/Documents/Work/Year 12/SDD/MajorWork/MajorWorkSDD/MajorWorkCardv0.0/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

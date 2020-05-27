@@ -11,7 +11,7 @@ public class Draw : MonoBehaviour
     public bool drawn = false;
     void Start()
     {
-        
+        transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
     }
     void Update()
     {

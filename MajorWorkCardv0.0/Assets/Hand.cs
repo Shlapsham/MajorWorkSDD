@@ -22,7 +22,10 @@ public class Hand : MonoBehaviour
     }
     void drawCard()
     {
-        newCard = draw.newCardAdd[draw.newCardAdd.Count() - 1];
+        if (draw.newCardAdd.Count() != 0)
+        {
+            newCard = draw.newCardAdd[draw.newCardAdd.Count() - 1];
+        }
         if (draw.drawn)
         {
             Cards.Add(newCard);
@@ -33,9 +36,16 @@ public class Hand : MonoBehaviour
     {
         foreach(GameObject card in Cards)
         {
-            Drag drag = card.GetComponent<Drag>();
-            drag.cardsInHand = Cards.Count();
-            drag.handPosition = Cards.IndexOf(card) + 1;
+            if (card == null)
+            {
+                Cards.Remove(card);
+            }
+            else
+            {
+                Drag drag = card.GetComponent<Drag>();
+                drag.cardsInHand = Cards.Count();
+                drag.handPosition = Cards.IndexOf(card) + 1;
+            }
         }
     }
 }

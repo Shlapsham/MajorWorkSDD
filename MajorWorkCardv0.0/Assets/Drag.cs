@@ -6,13 +6,14 @@ public class Drag : MonoBehaviour
 {
     [SerializeField]
     bool holding = false;
-    float spaceBetween = 100; //space inbetweeen cards
+    float spaceBetween = 50; //space inbetweeen cards
     float positionOf1in10; //x pos of the first card in a hand of 10
     [SerializeField]
     public float handPosition;
     [SerializeField]
     public float cardsInHand;
-    float handYValue = -200;
+    float handYValue = -220;
+    float height;
     Vector2 currentPos;
     Vector2 basePos;
     Vector2 baseToCurrent;
@@ -44,8 +45,7 @@ public class Drag : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, basePos, 16);
         }
-        float distance;
         baseToCurrent = basePos - currentPos;
-        transform.localScale = Vector3.Lerp(new Vector3(0.5f, 0.5f, 0.5f), new Vector3(1f, 1f, 1f), (Vector2.SqrMagnitude(baseToCurrent)/ 32864) - 0.2f);
+        transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f, 0.25f), new Vector3(0.75f, 0.75f, 0.75f), (Vector2.SqrMagnitude(baseToCurrent)/ 16384) - 0.2f);
     }
 }

@@ -28,5 +28,6 @@ public class EndTurn : MonoBehaviour
         eEnergyS.reset();
         gameData.roundNum++;
         pDeckS.draw();
+        gameData.playerTurn = !gameData.playerTurn;
     }
 }
